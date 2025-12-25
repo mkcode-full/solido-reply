@@ -6,11 +6,11 @@
 
 html {
   font-size: 62.5%;
-  /* 1rem = 10px */
+
 }
 
 
-/* Media defaults */
+
 img,
 picture,
 video,
@@ -20,7 +20,7 @@ svg {
   max-width: 100%;
 }
 
-/* Form elements */
+
 input,
 button,
 textarea,
@@ -28,13 +28,13 @@ select {
   font: inherit;
 }
 
-/* Remove button default styles */
+
 button {
   border: none;
   cursor: pointer;
 }
 
-/* Remove list styles */
+
 ul,
 ol {
   list-style: none;
@@ -42,19 +42,19 @@ ol {
   margin: 0;
 }
 
-/* Anchor defaults */
+
 a {
   text-decoration: none;
   color: inherit;
 }
 
-/* Table */
+
 table {
   border-collapse: collapse;
   border-spacing: 0;
 }
 
-/* Better text wrapping */
+
 p,
 h1,
 h2,
@@ -65,7 +65,7 @@ h6 {
   overflow-wrap: break-word;
 }
 
-/* Root stacking context */
+
 #root,
 #__next {
   isolation: isolate;
@@ -142,26 +142,26 @@ overflow: hidden;
 
 .feature-item {
   display: flex;
-  align-items: flex-start; /* İkonu yazının üst hizasına sabitler (Daha şık durur) */
+  align-items: flex-start;
   gap: 20px;
-  flex: 1; /* Kutuların eşit genişlikte olmasını sağlar */
+  flex: 1;
 }
 
 .icon-box {
-  width: 70px;       /* 80px biraz büyük kalabilir, 70 ideal */
+  width: 70px;
   height: 70px;
-  min-width: 70px;   /* Yazı uzarsa kutunun sıkışmasını engeller */
-  border-radius: 20px; /* O tatlı yumuşak köşeleri verir */
+  min-width: 70px;
+    border-radius: 20px;
   display: flex;       
-  justify-content: center; /* Resmi kutunun tam ortasına koyar */
+  justify-content: center;
   align-items: center;
-  border: 1px solid #ddd; /* Varsayılan gri çizgi */
+  border: 1px solid #ddd;
   background-color: transparent;
-  transition: transform 0.3s ease; /* Üzerine gelince hareket efekti için */
+  transition: transform 0.3s ease;
 }
 
 .icon-box img {
-    width: 32px;  /* Resim kutunun içinde çok büyük durmasın diye */
+    width: 32px;
     height: 32px;
     object-fit: contain;
 }
@@ -175,62 +175,62 @@ overflow: hidden;
 }
 
 .feature-item:hover .icon-box {
-    transform: translateY(-5px); /* Üzerine gelince ikon hafif yukarı kalkar */
+    transform: translateY(-5px);
 }
 
 
-/* --- ORTA BÖLÜM (RESİM VE YAZI) --- */
+
 .info-section {
-    display: flex;       /* Yan yana getirme özelliği */
-    align-items: center; /* Dikeyde ortalar */
-    gap: 60px;           /* İki taraf arasındaki boşluk */
+    display: flex;
+      align-items: center;
+      gap: 60px;
     margin-top: 100px;
     margin-bottom: 100px;
 }
 
-/* Sol (Resim) ve Sağ (Yazı) kısımları eşit böler */
+
 .info-left, 
 .info-right {
-    flex: 1; /* Mevcut genişliğin yarısını kapla */
+    flex: 1;
 }
 
-/* Resmin taşmasını engellemek için */
+
 .info-left img {
     width: 100%;
     height: auto;
 }
 
-/* Başlık Stili */
+
 .info-right h2 {
     font-size: 2.8rem;
     color: #333;
-    font-weight: 300; /* İnce font */
+    font-weight: 300;
     margin-bottom: 20px;
     line-height: 1.3;
 }
 
-/* Açıklama Paragrafı */
+
 .info-right .description {
     color: #666;
     margin-bottom: 30px;
     line-height: 1.6;
 }
 
-/* --- LİSTE TASARIMI (Maddeler) --- */
+
 .info-list {
     margin-bottom: 40px;
 }
 
 .info-list li {
-    display: flex;       /* İkon ve metni yan yana getirir */
-    align-items: center; /* Hizalar */
+    display: flex;
+      align-items: center;
     gap: 15px;
-    margin-bottom: 20px; /* Maddeler arası boşluk */
+    margin-bottom: 20px;
     color: #555;
     font-size: 1.5rem;
 }
 
-/* Küçük ikonların kutusu */
+
 .list-icon {
     width: 40px;
     height: 40px;
@@ -240,16 +240,18 @@ overflow: hidden;
 }
 
 .list-icon img {
-    width: 24px;
-    height: 24px;
-    opacity: 0.7; /* İkonlar çok siyah durmasın diye hafif grileştirme */
+    width: 34px;
+      height: 34px;
+      opacity: 0.7;
+      filter: brightness(0) invert(1);
+      display: block;
 }
 
-/* --- BUTTON TASARIMI (Outline) --- */
+
 .btn-outline {
     display: inline-block;
     padding: 12px 30px;
-    border: 1px solid #ddd; /* İnce gri çerçeve */
+    border: 1px solid #ddd;
     border-radius: 5px;
     color: #666;
     font-size: 1.4rem;
@@ -258,47 +260,46 @@ overflow: hidden;
 }
 
 .btn-outline:hover {
-    background-color: #1d4354; /* Ana renk (Mavimsi ton) */
-    color: #fff;               /* Yazı beyaz olur */
+    background-color: #1d4354;
+      color: #fff;
     border-color: #1d4354;
 }
 
 
 .site-footer {
-    background-color: #262a2e; /* Görseldeki koyu gri renk */
-    color: #b0b0b0;            /* Yazılar için açık gri */
-    padding: 60px 0;           /* Üstten ve alttan boşluk */
+    background-color: #262a2e;
+      color: #b0b0b0;
+      padding: 60px 0;
     margin-top: 50px;
 }
 
-/* --- ÜST KISIM (Logo ve Metin) --- */
+
 .footer-top {
     display: flex;
-    justify-content: space-between; /* Logo sola, yazı sağa yaslanır */
+    justify-content: space-between;
     align-items: center;
-    border-bottom: 1px solid #3e444a; /* İki katman arasındaki ince çizgi (opsiyonel) */
+    border-bottom: 1px solid #3e444a;
     padding-bottom: 40px;
     margin-bottom: 40px;
     gap: 40px;
 }
 
 .footer-logo img {
-    max-width: 180px; /* Logo çok büyükse küçültür */
-    filter: brightness(0) invert(1); /* Logoyu beyaz yapmak için (Gerekirse kullan) */
-    /* Eğer logon zaten beyazsa veya renkli kalacaksa üstteki filter satırını sil */
+    max-width: 180px;
+      filter: brightness(0) invert(1);
 }
 
 .footer-text p {
-    max-width: 600px; /* Yazının çok uzamasını engeller */
+    max-width: 600px;
     font-size: 1.4rem;
     line-height: 1.6;
     text-align: left;
 }
 
-/* --- ALT KISIM (İletişim) --- */
+
 .footer-bottom {
     display: flex;
-    justify-content: space-between; /* 3 sütunu eşit aralıkla dağıtır */
+    justify-content: space-between;
     align-items: flex-start;
 }
 
@@ -308,22 +309,22 @@ overflow: hidden;
     gap: 15px;
 }
 
-/* İkonların boyutu */
+
 .contact-icon img {
     width: 24px;
     height: 24px;
-    opacity: 0.6; /* İkonları biraz grileştirir */
+    opacity: 0.6;
 }
 
 .contact-info h4 {
-    color: #fff; /* İletişim bilgileri parlak beyaz */
+    color: #fff;
     font-size: 1.6rem;
     font-weight: 400;
     margin-bottom: 3px;
 }
 
 .contact-info span {
-    font-size: 1.1rem; /* Saat bilgisi küçük */
+    font-size: 1.1rem;
     color: #777;
     display: block;
 }
@@ -383,14 +384,14 @@ overflow: hidden;
   }
 
   .info-section {
-        flex-direction: column; /* Mobilde alt alta gelsin */
-        text-align: center;     /* Yazıları ortala */
+        flex-direction: column;
+          text-align: center;
         gap: 40px;
     }
 
     .info-list li {
-        justify-content: center; /* Listeyi de ortala */
-        text-align: left;        /* Metin soldan aksın ama blok ortada dursun */
+        justify-content: center;
+          text-align: left;
     }
     
     .info-right h2 {
@@ -399,19 +400,19 @@ overflow: hidden;
 
 
     .footer-top {
-        flex-direction: column; /* Alt alta gelsin */
+        flex-direction: column;
         text-align: center;
         align-items: center;
     }
 
     .footer-text p {
-        text-align: center; /* Mobilde yazıyı ortala */
+        text-align: center;
     }
 
     .footer-bottom {
-        flex-direction: column; /* İletişim bilgileri alt alta */
+        flex-direction: column;
         gap: 30px;
-        align-items: center; /* Ortala */
+        align-items: center;
     }
 
     .contact-col {
