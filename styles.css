@@ -1,0 +1,421 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  /* 1rem = 10px */
+}
+
+
+/* Media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/* Form elements */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove button default styles */
+button {
+  border: none;
+  cursor: pointer;
+}
+
+/* Remove list styles */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Anchor defaults */
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Table */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Better text wrapping */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* Root stacking context */
+#root,
+#__next {
+  isolation: isolate;
+}
+
+body {
+  font-family: 'Roboto', system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+  font-size: 1.6rem;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 60px;
+  align-items: center;
+}
+
+.menu {
+  display: flex;
+  align-items: center;
+  gap: 60px;
+}
+
+.logo-img {
+  width: 100%;
+  height: 100px;
+}
+
+.content_image {
+  width: 100%;
+}
+
+.menu li a span {
+  color: blue;
+}
+
+.menu li a {
+  transition: color 0.3s ease;
+}
+
+.menu li a:hover {
+  color: blue;
+}
+
+.btn {
+  background-color: #1d4354;
+  border-radius: 7px;
+  padding: 7px;
+  color: white;
+   display: inline-flex;
+  align-items: center;
+  justify-content: center;
+overflow: hidden;
+}
+
+.button-img {
+  width: 30px;
+  height: 30px;
+  filter: brightness(0) invert(1);
+  display: block;
+}
+
+
+.icon-box {
+  width: 80px;
+  height: 80px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: flex-start; /* İkonu yazının üst hizasına sabitler (Daha şık durur) */
+  gap: 20px;
+  flex: 1; /* Kutuların eşit genişlikte olmasını sağlar */
+}
+
+.icon-box {
+  width: 70px;       /* 80px biraz büyük kalabilir, 70 ideal */
+  height: 70px;
+  min-width: 70px;   /* Yazı uzarsa kutunun sıkışmasını engeller */
+  border-radius: 20px; /* O tatlı yumuşak köşeleri verir */
+  display: flex;       
+  justify-content: center; /* Resmi kutunun tam ortasına koyar */
+  align-items: center;
+  border: 1px solid #ddd; /* Varsayılan gri çizgi */
+  background-color: transparent;
+  transition: transform 0.3s ease; /* Üzerine gelince hareket efekti için */
+}
+
+.icon-box img {
+    width: 32px;  /* Resim kutunun içinde çok büyük durmasın diye */
+    height: 32px;
+    object-fit: contain;
+}
+
+.features {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+  margin-top: 30px;
+  width: 100%;
+}
+
+.feature-item:hover .icon-box {
+    transform: translateY(-5px); /* Üzerine gelince ikon hafif yukarı kalkar */
+}
+
+
+/* --- ORTA BÖLÜM (RESİM VE YAZI) --- */
+.info-section {
+    display: flex;       /* Yan yana getirme özelliği */
+    align-items: center; /* Dikeyde ortalar */
+    gap: 60px;           /* İki taraf arasındaki boşluk */
+    margin-top: 100px;
+    margin-bottom: 100px;
+}
+
+/* Sol (Resim) ve Sağ (Yazı) kısımları eşit böler */
+.info-left, 
+.info-right {
+    flex: 1; /* Mevcut genişliğin yarısını kapla */
+}
+
+/* Resmin taşmasını engellemek için */
+.info-left img {
+    width: 100%;
+    height: auto;
+}
+
+/* Başlık Stili */
+.info-right h2 {
+    font-size: 2.8rem;
+    color: #333;
+    font-weight: 300; /* İnce font */
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+/* Açıklama Paragrafı */
+.info-right .description {
+    color: #666;
+    margin-bottom: 30px;
+    line-height: 1.6;
+}
+
+/* --- LİSTE TASARIMI (Maddeler) --- */
+.info-list {
+    margin-bottom: 40px;
+}
+
+.info-list li {
+    display: flex;       /* İkon ve metni yan yana getirir */
+    align-items: center; /* Hizalar */
+    gap: 15px;
+    margin-bottom: 20px; /* Maddeler arası boşluk */
+    color: #555;
+    font-size: 1.5rem;
+}
+
+/* Küçük ikonların kutusu */
+.list-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.list-icon img {
+    width: 24px;
+    height: 24px;
+    opacity: 0.7; /* İkonlar çok siyah durmasın diye hafif grileştirme */
+}
+
+/* --- BUTTON TASARIMI (Outline) --- */
+.btn-outline {
+    display: inline-block;
+    padding: 12px 30px;
+    border: 1px solid #ddd; /* İnce gri çerçeve */
+    border-radius: 5px;
+    color: #666;
+    font-size: 1.4rem;
+    transition: all 0.3s ease;
+    background-color: transparent;
+}
+
+.btn-outline:hover {
+    background-color: #1d4354; /* Ana renk (Mavimsi ton) */
+    color: #fff;               /* Yazı beyaz olur */
+    border-color: #1d4354;
+}
+
+
+.site-footer {
+    background-color: #262a2e; /* Görseldeki koyu gri renk */
+    color: #b0b0b0;            /* Yazılar için açık gri */
+    padding: 60px 0;           /* Üstten ve alttan boşluk */
+    margin-top: 50px;
+}
+
+/* --- ÜST KISIM (Logo ve Metin) --- */
+.footer-top {
+    display: flex;
+    justify-content: space-between; /* Logo sola, yazı sağa yaslanır */
+    align-items: center;
+    border-bottom: 1px solid #3e444a; /* İki katman arasındaki ince çizgi (opsiyonel) */
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    gap: 40px;
+}
+
+.footer-logo img {
+    max-width: 180px; /* Logo çok büyükse küçültür */
+    filter: brightness(0) invert(1); /* Logoyu beyaz yapmak için (Gerekirse kullan) */
+    /* Eğer logon zaten beyazsa veya renkli kalacaksa üstteki filter satırını sil */
+}
+
+.footer-text p {
+    max-width: 600px; /* Yazının çok uzamasını engeller */
+    font-size: 1.4rem;
+    line-height: 1.6;
+    text-align: left;
+}
+
+/* --- ALT KISIM (İletişim) --- */
+.footer-bottom {
+    display: flex;
+    justify-content: space-between; /* 3 sütunu eşit aralıkla dağıtır */
+    align-items: flex-start;
+}
+
+.contact-col {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+/* İkonların boyutu */
+.contact-icon img {
+    width: 24px;
+    height: 24px;
+    opacity: 0.6; /* İkonları biraz grileştirir */
+}
+
+.contact-info h4 {
+    color: #fff; /* İletişim bilgileri parlak beyaz */
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-bottom: 3px;
+}
+
+.contact-info span {
+    font-size: 1.1rem; /* Saat bilgisi küçük */
+    color: #777;
+    display: block;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 768px) {
+  .menu {
+    display: none;
+  }
+
+  .button-img {
+    width: 25px;
+    height: 25px;
+  }
+
+  .btn {
+    background-color: #1d4354;
+    border-radius: 7px;
+    padding: 4px;
+  }
+
+  .logo-img {
+    width: 100%;
+    height: 50px;
+  }
+
+  .navbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+    align-items: center;
+  }
+
+  .content_image {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hero-img {
+    width: 100%;
+    height: 200px;
+  }
+  
+  .features {
+    flex-direction: column;
+    padding: 30px;
+  }
+
+  .info-section {
+        flex-direction: column; /* Mobilde alt alta gelsin */
+        text-align: center;     /* Yazıları ortala */
+        gap: 40px;
+    }
+
+    .info-list li {
+        justify-content: center; /* Listeyi de ortala */
+        text-align: left;        /* Metin soldan aksın ama blok ortada dursun */
+    }
+    
+    .info-right h2 {
+        font-size: 2.2rem;
+    }
+
+
+    .footer-top {
+        flex-direction: column; /* Alt alta gelsin */
+        text-align: center;
+        align-items: center;
+    }
+
+    .footer-text p {
+        text-align: center; /* Mobilde yazıyı ortala */
+    }
+
+    .footer-bottom {
+        flex-direction: column; /* İletişim bilgileri alt alta */
+        gap: 30px;
+        align-items: center; /* Ortala */
+    }
+
+    .contact-col {
+        justify-content: center;
+    }
+
+}
